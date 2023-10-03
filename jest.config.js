@@ -1,8 +1,8 @@
 // jest.config.js
-export default {
+module.exports = {
     // Jest configuration...
-    moduleNameMapper: {
-        '^@/(.*)$': '<rootDir>/$1',
+    transform: {
+        '^.+\\.js$': 'babel-jest',
     },
     // ... other Jest settings ...
 };

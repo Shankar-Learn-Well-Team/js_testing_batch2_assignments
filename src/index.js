@@ -1,9 +1,11 @@
-import assignment1 from './assignment1/assignment1.js';
+const { sayHello } = require('./assignment1/assignment1.js');
+const { add } = require('./assignment2/assignment2.js');
 
 const app = () => {
     // Make your changes from Below
 
-    assignment1.sayHello('Baki Hanma');
+    console.log(sayHello('Baki Hanma'));
+    console.log(add(1, 2));
 
     // Do not make any changes below
 };

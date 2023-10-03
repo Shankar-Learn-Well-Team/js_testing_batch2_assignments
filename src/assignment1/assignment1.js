@@ -1,5 +1,5 @@
 function sayHello(userName) {
-    console.log('Hello, Good Morning', userName);
+    return `Hello, Good Morning ${userName}`;
 }
 
-export default { sayHello };
+module.exports = { sayHello };
