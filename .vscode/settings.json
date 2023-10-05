@@ -1,0 +1,34 @@
+{
+    "explorer.confirmDelete": false,
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.minimap.enabled": false,
+    "files.autoSave": "afterDelay",
+    "editor.guides.bracketPairs": true,
+    "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "prettier.requireConfig": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "git.enableSmartCommit": true,
+    "git.confirmSync": false,
+    "explorer.confirmDragAndDrop": false,
+    "git.autofetch": true,
+    "workbench.startupEditor": "none",
+    "editor.tokenColorCustomizations": {
+
+
+        "textMateRules": [{
+        "scope": "comment",
+        "settings": {
+            "fontStyle":"",
+            "foreground": "#FFE",
+        }
+    }]
+    },
+    "workbench.colorTheme": "One Dark Theme",
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "window.openFoldersInNewWindow": "on"
+}
