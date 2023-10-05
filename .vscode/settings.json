@@ -1,7 +1,7 @@
 {
     "explorer.confirmDelete": false,
     "[javascript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+        "editor.defaultFormatter": "vscode.typescript-language-features"
     },
     "workbench.iconTheme": "material-icon-theme",
     "editor.minimap.enabled": false,
