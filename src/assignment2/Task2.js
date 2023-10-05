@@ -21,30 +21,25 @@
 
 // console.log("I/P string:", Input);
 // console.log("Reversed string:", Reversed);
-// ___________________________________________________
+___________________________________________________
 
-// function stringFilter(array, criterion) {
-//     const filteredArray = [];
-//     // Encapsulate the filter logic within a closure
-//     function filterByCriterion() {
-//       for (const item of array) {
-//         if (criterion(item)) {
-//           filteredArray.push(item);
-//         }
-//       }
-//     }
-//     // Call the closure to perform the filtering
-//     filterByCriterion();
+function stringFilter(array, criterion) {
+    const filteredArray = [];
+    function filterByCriterion() {
+      for (const item of array) {
+        if (criterion(item)) {
+          filteredArray.push(item);
+        }
+      }
+    }
+    filterByCriterion();
   
-//     return filteredArray;
-//   }
-//   // Example usage:
-//   const inputArray = ["apple", "banana", "kiwi", "strawberry"];
-//   // Define the criterion function (e.g., filtering by string length)
-//   const criterionFunction = function (str) {
-//     return str.length > 6;
-//   };
-//   // Use the stringFilter function to filter the array
-//   const filteredResult = stringFilter(inputArray, criterionFunction);
-//   console.log("Filtered array:", filteredResult); // Output: Filtered array: ["banana", "strawberry"]
+    return filteredArray;
+  }
+  const inputArray = ["apple", "banana", "kiwi", "strawberry"];
+  const criterionFunction = function (str) {
+    return str.length > 6;
+  };
+  const filteredResult = stringFilter(inputArray, criterionFunction);
+  console.log("Filtered array:", filteredResult);
   

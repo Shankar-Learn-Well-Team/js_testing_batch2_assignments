@@ -19,8 +19,5 @@ function generatePrimes(limit) {
   
     return primes;
   }
-  
-  // Generate the first 10 prime numbers
   const first10Primes = generatePrimes(10);
-  
   console.log(`Prime numbers: [${first10Primes.join(', ')}]`);
