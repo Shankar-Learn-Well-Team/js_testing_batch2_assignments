@@ -28,7 +28,7 @@
         }
     }]
     },
-    "workbench.colorTheme": "One Dark Theme",
+    "workbench.colorTheme": "Visual Studio Dark",
     "javascript.updateImportsOnFileMove.enabled": "always",
     "window.openFoldersInNewWindow": "on"
 }
