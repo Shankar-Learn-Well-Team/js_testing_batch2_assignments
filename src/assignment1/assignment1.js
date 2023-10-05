@@ -1,5 +1,10 @@
-function sayHello(userName) {
-    return `Hello, Good Morning ${userName}`;
-}
+//const Fruits = ["Plum", "Apple" ,"Cherry"];
+//Fruit 1 = "Plum";
+//Fruit 2 = "Apple";
+//Fruit 3 = "Cherry";
 
-module.exports = { sayHello };
+const Fruits = [];
+Fruits[0] = "Apple";
+Fruits[1] = "Cherry";
+Fruits[2] = "Plum";
+console.log(Fruits);
