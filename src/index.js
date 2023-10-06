@@ -1,30 +1,20 @@
-const { sayHello } = require('./assignment1/assignment1.js');
-const { add } = require('./assignment2/assignment2.js');
-const { forEach } = require('lodash');
+const url = require('url');
 
-const app = () => {
-    // Make your changes from Below
+const myUrl = url.parse(
+    'http://mywebsite.com/login.html/    type="na"?id=100&status=active',
+    true,
+);
 
-    console.log(sayHello('Baki Hanma'));
-    console.log(add(1, 2));
+console.log(myUrl);
 
-    const object = {
-        brand: 'Toyota',
-        color: 'Red',
-        model: '2010',
-        name: 'Camry',
-    };
+// const myUrlObject = myUrl.format(myUrl);
 
-    forEach(object, (ele) => {
-        console.log(ele);
-    });
+// console.log(myUrlObject);
 
-    // Do not make any changes below
-};
+const myUrl2 = new URL(
+    'http://mywebsite.com/hello.html/     type="na"?id=100&status=active',
+);
 
-// IIFE function, Never Make any changes below
-(function () {
-    console.warn('JS Execution Started');
-    app();
-    console.warn('JS Execution Complete');
-})();
+myUrl2.
+
+console.log(myUrl2);
