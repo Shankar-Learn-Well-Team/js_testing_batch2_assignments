@@ -29,6 +29,7 @@ console.log(inputval);
 // -   **Input**: Generating the first 10 prime numbers.
 // -   **Output**: Prime numbers: [2, 3, 5, 7, 11, 13, 17, 19, 23, 29]
 
+let PrimeNos=[];
 function primeno() {
   let localVar;
      return function innerScope() {
@@ -40,7 +41,7 @@ function primeno() {
             }
         }
         if (localVar == 2) {
-            console.log("Prime no - "+ i);
+          PrimeNos.push(i);
         }
      }
   };
@@ -48,6 +49,8 @@ function primeno() {
 
 const innerScopeFunc = primeno();
 innerScopeFunc();
+console.log("Prime no - "+PrimeNos);
+
 
 // ### 1. Sum Calculator
 
