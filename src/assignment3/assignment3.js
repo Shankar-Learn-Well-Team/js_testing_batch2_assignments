@@ -1,6 +1,8 @@
 function isEven(n) {
-    if (n % 2 == 0) {
-        console.log(true);
+    if (Number.isInteger(n) === true) {
+        if (n % 2 == 0) {
+            console.log(true);
+        }
     } else {
         console.log(false);
     }
