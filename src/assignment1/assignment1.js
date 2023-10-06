@@ -1,5 +1,16 @@
-function sayHello(userName) {
-    return `Hello, Good Morning ${userName}`;
+let a = 5,
+    b = 3,
+    c;
+function calc() {
+    let a = 5,
+        b = 3,
+        c;
+    function add() {
+        c = a + b;
+        console.log(c);
+    }
+    console.log(c);
+    return add;
 }
-
-module.exports = { sayHello };
+let out = calc();
+out();
