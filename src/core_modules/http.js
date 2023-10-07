@@ -15,11 +15,9 @@ function startServer() {
                 } else if (req.method === 'POST') {
                     // Handle POST request for /user
                     let requestData = '';
-
                     req.on('data', (chunk) => {
                         requestData += chunk;
                     });
-
                     req.on('end', () => {
                         const requestObject = JSON.parse(requestData);
                         res.statusCode = 200;
@@ -27,7 +25,17 @@ function startServer() {
                         const responseObject = { receivedData: requestObject };
                         res.end(JSON.stringify(responseObject));
                     });
-                } else {
+                }
+                else if (req.method === 'DELETE') {
+                    // Handle GET request for /user
+                    res.statusCode = 200;
+                    res.setHeader('Content-Type', 'application/json');
+                    const responseObject = {
+                        message: 'This is a DELETE request for /user.',
+                    };
+                    res.end(JSON.stringify(responseObject));
+                }
+                else {
                     // Handle other HTTP methods for /user
                     res.statusCode = 405;
                     res.setHeader('Allow', 'GET, POST');
@@ -47,7 +55,6 @@ function startServer() {
             res.end('Internal Server Error');
         }
     });
-
     server.listen(5000, 'localhost', () => {
         console.log('Server running on http://localhost:5000/');
     });
