@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Todo List</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+            }
+            .container {
+                max-width: 400px;
+                margin: 0 auto;
+            }
+            h1 {
+                text-align: center;
+            }
+            .input-container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-bottom: none;
+            }
+            .todo-list {
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+            }
+            .todo-item {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 10px;
+                border: 1px solid #ccc;
+                margin: 0;
+            }
+            .todo-item input[type='checkbox'] {
+                margin-right: 10px;
+            }
+            .todo-item .delete-button {
+                background-color: #ff6b6b;
+                color: white;
+                border: none;
+                padding: 5px 10px;
+                cursor: pointer;
+            }
+            #newTodo {
+                flex-grow: 1;
+                padding: 5px;
+                border: 1px solid #ccc;
+                border-radius: 3px;
+            }
+            #addTodo {
+                margin-left: 10px;
+                background-color: #4caf50;
+                color: white;
+                border: none;
+                padding: 5px 10px;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Todo List</h1>
+            <div class="input-container">
+                <input type="text" id="newTodo" placeholder="Add a new todo" />
+                <button id="addTodo">Add</button>
+            </div>
+            <ul class="todo-list">
+                <li class="todo-item">
+                    <input type="checkbox" />
+                    <span>Buy groceries</span>
+                    <button class="delete-button">Delete</button>
+                </li>
+                <li class="todo-item">
+                    <input type="checkbox" />
+                    <span>Walk the dog</span>
+                    <button class="delete-button">Delete</button>
+                </li>
+            </ul>
+        </div>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const addTodoButton = document.getElementById('addTodo');
+                const newTodoInput = document.getElementById('newTodo');
+                const todoList = document.querySelector('.todo-list');
+
+                addTodoButton.addEventListener('click', function () {
+                    const todoText = newTodoInput.value.trim();
+                    if (todoText !== '') {
+                        const listItem = document.createElement('li');
+                        listItem.className = 'todo-item';
+                        listItem.innerHTML = `
+                        <input type="checkbox">
+                        <span>${todoText}</span>
+                        <button class="delete-button">Delete</button>
+                    `;
+                        todoList.appendChild(listItem);
+                        newTodoInput.value = '';
+                    }
+                });
+
+                todoList.addEventListener('click', function (event) {
+                    if (event.target.classList.contains('delete-button')) {
+                        event.target.parentElement.remove();
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>
