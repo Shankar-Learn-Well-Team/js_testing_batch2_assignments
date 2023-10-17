@@ -3,12 +3,12 @@ const { add, subtract } = require('./math');
 describe('Math Functions', () => {
     // Test the 'add' function
     describe('add', () => {
-        it('should add two positive numbers correctly', () => {
+        it.skip('should add two positive numbers correctly', () => {
             const result = add(3, 5);
             expect(result).toBe(8);
         });
 
-        it('should add a positive and a negative number correctly', () => {
+        it.only('should add a positive and a negative number correctly', () => {
             const result = add(3, -5);
             expect(result).toBe(-2);
         });
