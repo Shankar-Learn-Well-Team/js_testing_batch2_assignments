@@ -3,6 +3,7 @@ const mockFn = jest.fn();
 test('calling a mock function', () => {
     mockFn('Hello, Jest!');
     expect(mockFn).toHaveBeenCalledWith('Hello, Jest!');
+    
 });
 
 test('asserting mock function calls', () => {
@@ -12,5 +13,5 @@ test('asserting mock function calls', () => {
     expect(mockFn).toHaveBeenCalled();
     expect(mockFn).toHaveBeenCalledWith('Hello,');
     expect(mockFn).toHaveBeenCalledWith('Jest!');
-    expect(mockFn).toHaveBeenCalledTimes(2);
+    expect(mockFn).toHaveBeenCalledTimes(3);
 });
