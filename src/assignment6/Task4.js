@@ -1,5 +1,5 @@
 // assignment 6 
-// Task 1 - returned_values.test.js
+// Task 4 - returned_values.test.js
 
 
 test('check if number is a square', () => {
