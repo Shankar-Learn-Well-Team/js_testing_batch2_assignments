@@ -1,5 +1,5 @@
 // assignment 6 
-// Task 1 - instances.test.js
+// Task 2 - instances.test.js
 test('check mock function instances', () => {
     const nameMockFn = jest.fn(function (countryName, currencyType, capital) {
         this.countryName = countryName;
