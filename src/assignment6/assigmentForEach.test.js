@@ -1,19 +1,6 @@
 const forEach = require('../mock/forEach');
 
-
-// function isPerfectNumber(num) {
-//     let sum = 0;
-//     for (var i = 0; i < num; i++) {
-//         if (num % i == 0) {
-//             sum = sum + i;
-//         }
-//     }
-//     if (sum == num) { return true; }
-//     return false;
-
-// }
-
-const isPerfectNumber = jest.fn((num)=>{
+const isPerfectNumber = jest.fn((num) => {
     let sum = 0;
     for (var i = 0; i < num; i++) {
         if (num % i == 0) {
@@ -26,7 +13,7 @@ const isPerfectNumber = jest.fn((num)=>{
 });
 
 test('forEach Perfect Number function', () => {
-    forEach([6,12,28], isPerfectNumber);
+    forEach([6, 12, 28], isPerfectNumber);
 
 
     expect(isPerfectNumber.mock.results[0].value).toBe(true);
