@@ -1,5 +1,5 @@
 // assignment 6 
-// Task 1 - mock_assert.test.js
+// Task 3 - mock_assert.test.js
 
 const createArray = jest.fn();
 
