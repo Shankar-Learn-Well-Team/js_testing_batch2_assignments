@@ -18,17 +18,17 @@
     "git.autofetch": true,
     "workbench.startupEditor": "none",
     "editor.tokenColorCustomizations": {
-
-
-        "textMateRules": [{
-        "scope": "comment",
-        "settings": {
-            "fontStyle":"",
-            "foreground": "#FFE",
-        }
-    }]
+        "textMateRules": [
+            {
+                "scope": "comment",
+                "settings": {
+                    "fontStyle": "",
+                    "foreground": "#FFE"
+                }
+            }
+        ]
     },
-    "workbench.colorTheme": "One Dark Theme",
+    "workbench.colorTheme": "Default Dark Modern",
     "javascript.updateImportsOnFileMove.enabled": "always",
     "window.openFoldersInNewWindow": "on"
 }
