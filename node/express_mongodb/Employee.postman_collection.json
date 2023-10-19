@@ -1,0 +1,150 @@
+{
+	"info": {
+		"_postman_id": "d646a8b9-9186-4e73-b1b9-3a1a4a5f81ce",
+		"name": "Employee",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30300902"
+	},
+	"item": [
+		{
+			"name": "Create Token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"appId\": \"employee\",\r\n    \"appSecret\": \"d45a44cbb2d2eb54807a67394b5989d80b25a6354bc36ab60de8706a41ed8fa3\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/createToken",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"createToken"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Employee",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"firstname\": \"WIll\",\r\n  \"lastname\": \"Smith\",\r\n  \"dob\": \"1990-01-15\",\r\n  \"address\": \"New York\",\r\n  \"contact\": \"123-456-7890\",\r\n  \"email\": \"drake@example.com\",\r\n  \"role\": \"Manager\",\r\n  \"joiningdate\": \"2022-03-01\",\r\n  \"manager\": \"Manager Name\",\r\n  \"shift\": \"Morning\",\r\n  \"storeId\": 101,\r\n  \"isManager\": true\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/createEmployee",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"createEmployee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Employee",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/getEmployee/EMP4696",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"getEmployee",
+						"EMP4696"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Employee",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBJZCI6ImVtcGxveWVlIiwiaWF0IjoxNjk2ODgxMzMwLCJleHAiOjE2OTY4ODQ5MzB9.swh-DOFhP7ZxMU18BQEZOinHZZ9fL-AmsGg-z9ePomI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"firstname\": \"Updated Firstname\",\r\n  \"lastname\": \"Updated Lastname\",\r\n  \"dob\": \"1990-01-15\",\r\n  \"address\": \"Updated Address\",\r\n  \"contact\": \"Updated Contact\",\r\n  \"email\": \"updated@example.com\",\r\n  \"role\": \"Updated Role\",\r\n  \"joiningdate\": \"2022-03-01\",\r\n  \"manager\": \"Updated Manager\",\r\n  \"shift\": \"Updated Shift\",\r\n  \"storeId\": 101,\r\n  \"isManager\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/updateEmployee/EMP4696",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"updateEmployee",
+						"EMP4696"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Employee",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/deleteEmployee/EMP3672",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"deleteEmployee",
+						"EMP3672"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
