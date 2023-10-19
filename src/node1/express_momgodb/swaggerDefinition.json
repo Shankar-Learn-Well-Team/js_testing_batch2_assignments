@@ -1,0 +1,170 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "Express Mongo API's App",
+        "version": "1.0.0",
+        "description": "API documentation for Express Mongo API's Application"
+    },
+    "basePath": "/",
+    "paths": {
+        "/createToken": {
+            "post": {
+                "summary": "Create a token for app authentication",
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "appId": {
+                                    "type": "string"
+                                },
+                                "appSecret": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Token created successfully"
+                    },
+                    "401": {
+                        "description": "Unauthorized: Invalid credentials"
+                    },
+                    "500": {
+                        "description": "Internal server error"
+                    }
+                }
+            }
+        },
+        "/createEmployee": {
+            "post": {
+                "summary": "Create an employee and personal details entry",
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "firstname": { "type": "string" },
+                                "lastname": { "type": "string" },
+                                "dob": { "type": "string" },
+                                "address": { "type": "string" },
+                                "contact": { "type": "string" },
+                                "email": { "type": "string" },
+                                "role": { "type": "string" },
+                                "joiningdate": { "type": "string" },
+                                "manager": { "type": "string" },
+                                "shift": { "type": "string" },
+                                "storeId": { "type": "string" },
+                                "isManager": { "type": "boolean" }
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Employee created successfully"
+                    },
+                    "500": {
+                        "description": "Internal server error"
+                    }
+                }
+            }
+        },
+        "/getEmployee/{id}": {
+            "get": {
+                "summary": "Get an employee by ID",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful response"
+                    },
+                    "404": {
+                        "description": "User not found"
+                    },
+                    "500": {
+                        "description": "Internal server error"
+                    }
+                }
+            }
+        },
+        "/updateEmployee/{id}": {
+            "put": {
+                "summary": "Update an employee by ID",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "role": { "type": "string" },
+                                "joiningdate": { "type": "string" },
+                                "manager": { "type": "string" },
+                                "shift": { "type": "string" },
+                                "storeId": { "type": "string" },
+                                "isManager": { "type": "boolean" }
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Employee updated successfully"
+                    },
+                    "404": {
+                        "description": "Employee not found"
+                    },
+                    "500": {
+                        "description": "Internal server error"
+                    }
+                }
+            }
+        },
+        "/deleteEmployee/{id}": {
+            "delete": {
+                "summary": "Delete an employee by ID",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Employee deleted successfully"
+                    },
+                    "404": {
+                        "description": "Employee not found"
+                    },
+                    "500": {
+                        "description": "Internal server error"
+                    }
+                }
+            }
+        }
+    }
+}
